@@ -1,0 +1,14 @@
+kind: PersistentVolume
+apiVersion: v1
+metadata:
+  name: kafka1
+  labels:
+    type: local
+spec:
+  storageClassName: kafka1
+  capacity:
+    storage: 10Gi
+  accessModes:
+    - ReadWriteOnce
+  hostPath:
+    path: "/kafka/kafka/kafka-1"

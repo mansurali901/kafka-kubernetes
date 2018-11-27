@@ -1,0 +1,14 @@
+kind: PersistentVolume
+apiVersion: v1
+metadata:
+  name: zk0
+  labels:
+    type: local
+spec:
+  storageClassName: zk0
+  capacity:
+    storage: 10Gi
+  accessModes:
+    - ReadWriteOnce
+  hostPath:
+    path: "/kafka/zookeeper/zk-0"
